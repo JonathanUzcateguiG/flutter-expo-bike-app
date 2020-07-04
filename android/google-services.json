@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "1078314534143",
+    "firebase_url": "https://expobikecr-bb5e6.firebaseio.com",
+    "project_id": "expobikecr-bb5e6",
+    "storage_bucket": "expobikecr-bb5e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078314534143:android:bc972865814775c70438ca",
+        "android_client_info": {
+          "package_name": "com.example.expo_bike"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078314534143-3jjmlkbv351ctpoa4k5hf94tml854tk4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.expo_bike",
+            "certificate_hash": "12caf7a8b6b622eee0368df9f2ba961bb692e614"
+          }
+        },
+        {
+          "client_id": "1078314534143-vne7qnd4ldj7bhisqgo40b6sn8j3mhg8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.expo_bike",
+            "certificate_hash": "a3c067c2f9d75f761253905624b202df0ea7f8cf"
+          }
+        },
+        {
+          "client_id": "1078314534143-it5ds6oa01j7pt9b2rgspu1j9oco0lb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfSH__q2Ca4IjJaNLhNEywQaofO7gM6mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078314534143-it5ds6oa01j7pt9b2rgspu1j9oco0lb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
