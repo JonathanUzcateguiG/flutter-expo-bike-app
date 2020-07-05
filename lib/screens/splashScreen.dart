@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:expo_bike/services/storageservice.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -8,26 +8,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-  var ref = FirebaseStorage.instance.ref();
-  var imageUrl;
-
-  Future<String> getImageUrl() async {
-    return await ref.child('images').child('assets').child('splash_logo.png').getDownloadURL();
-  }
-
   @override
   void initState() {
     super.initState();
-
-    new Timer(new Duration(seconds: 100000000), () {
-      Navigator.of(context).pushNamedAndRemoveUntil('/login', (Route<dynamic> route) => false);
-    });
   }
 
   Widget build(BuildContext context) {
     return FutureBuilder<String>(
-      future: getImageUrl(),
+      future: StorageService.getSplashLogo(),
       builder: (context, AsyncSnapshot<String> snapshot) {
         if (snapshot.hasData) {
           print(snapshot.data);
