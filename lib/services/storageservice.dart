@@ -19,4 +19,8 @@ class StorageService extends ChangeNotifier {
   static Future<String> getMainSplashLogo() async {
     return await ref.child('images').child('assets').child('main_splash_logo.png').getDownloadURL();
   }
+
+  static Future<String> getBottomBarImage() async {
+    return await ref.child('images').child('assets').child('bottombar_image.png').getDownloadURL();
+  }
 }
