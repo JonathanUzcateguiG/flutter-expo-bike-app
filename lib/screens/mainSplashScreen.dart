@@ -98,7 +98,9 @@ class MainSplashScreen extends StatelessWidget {
               child: Container(
                 width: 50,
                 height: 50,
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  valueColor: new AlwaysStoppedAnimation<Color>(AppColors.redColor)
+                ),
               ),
             ),
           );

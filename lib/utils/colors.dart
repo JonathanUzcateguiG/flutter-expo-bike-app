@@ -4,6 +4,7 @@ class AppColors {
   // global colors
   static const greyColor = Color.fromRGBO(199, 201, 203, 1);
   static const greyOpacityColor = Color.fromRGBO(199, 201, 203, 0.8);
+  static const greyOverOpacityColor = Color.fromRGBO(240, 240, 240, 0.5); //BFBFBF
   static const greyBlackColor = Color.fromRGBO(179, 179, 179, 1); //B3B3B3
   static const greyDarkColor = Color.fromRGBO(77, 77, 77, 1); //4D4D4D
   static const greyDarkerColor = Color.fromRGBO(115, 115, 115, 1); //737373
@@ -18,4 +19,5 @@ class AppColors {
   static const blackSecondColor = Color.fromRGBO(200, 201, 202, 1); //C8C9CA
   static const blackThirdColor = Color.fromRGBO(47, 46, 46, 1); //2F2E2E
   static const zonasBorderColor = Color.fromRGBO(199, 201, 203, 1); //C7C9CB
+  static const greyDarkBoxColor = Color.fromRGBO(183, 183, 183, 1); //#B7B7B7
 }

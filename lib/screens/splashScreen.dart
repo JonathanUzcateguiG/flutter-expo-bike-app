@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:expo_bike/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:expo_bike/services/storageservice.dart';
 
@@ -43,7 +44,9 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Container(
                 width: 50,
                 height: 50,
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  valueColor: new AlwaysStoppedAnimation<Color>(AppColors.redColor)
+                ),
               ),
             ),
           );

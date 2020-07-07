@@ -29,7 +29,10 @@ dependencies:
   firebase_auth: ^0.16.1
   google_sign_in: ^4.5.1
   firebase_storage: ^3.1.6
-
+  image_picker: ^0.6.7+4
+  image_cropper: ^1.2.3
+  provider: ^4.2.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -131,6 +134,8 @@ flutter:
     - assets/images/rutas_instagram_icon.png
     - assets/images/rutas_copiarlink_icon.png
     - assets/images/bottom_icon.png
+    
+    - assets/newImages/register_second_check.png
 
   fonts:
     - family: HelveticaBold

@@ -9,7 +9,7 @@ class _ExplorarTabParatiState extends State<ExplorarTabParati> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 40),
+      padding: EdgeInsets.only(bottom: 80),
       child: ListView.builder(
       itemCount: (eventos.length / 2).ceil(),
       itemBuilder: (context, idx) {
@@ -36,7 +36,7 @@ class _ExplorarTabParatiState extends State<ExplorarTabParati> {
                               children: <Widget>[
                                 Container(
                                   height: 120,
-                                  width: 145,
+                                  width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
@@ -68,7 +68,7 @@ class _ExplorarTabParatiState extends State<ExplorarTabParati> {
                     SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    eventos.length > idx * 2 + 1 ? Column(
                       children: <Widget>[
                         Container(
                           height: 170,
@@ -96,7 +96,7 @@ class _ExplorarTabParatiState extends State<ExplorarTabParati> {
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        eventos[idx + 1].title,
+                                        eventos[idx * 2 + 1].title,
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 13
@@ -109,6 +109,10 @@ class _ExplorarTabParatiState extends State<ExplorarTabParati> {
                             ),
                           ),
                         ),
+                      ],
+                    ) : Column(
+                      children: <Widget>[
+
                       ],
                     ),
                   ],

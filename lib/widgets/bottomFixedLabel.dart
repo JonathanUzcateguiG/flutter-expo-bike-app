@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:expo_bike/services/storageservice.dart';
+import 'package:expo_bike/utils/colors.dart';
 
 class BottomFixedLabel extends StatelessWidget {
   @override
@@ -29,7 +30,9 @@ class BottomFixedLabel extends StatelessWidget {
               child: Container(
                 width: 50,
                 height: 50,
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  valueColor: new AlwaysStoppedAnimation<Color>(AppColors.redColor)
+                ),
               ),
             ),
           );

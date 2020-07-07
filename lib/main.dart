@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'screens/splashScreen.dart';
 import 'screens/loginScreen.dart';
-import 'screens/mainDialogScreen.dart';
+import 'screens/registerFirstScreen.dart';
+import 'screens/registerSecondScreen.dart';
 import 'screens/mainSplashScreen.dart';
-import 'screens/mainScreen.dart';
 import 'screens/explorar/explorarInscribirme.dart';
 
 void main() => runApp(MyApp());
@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashScreen(),
         '/login': (context) => LoginScreen(),
-        '/mainDialogScreen': (context) => MainDialogScreen(),
+        '/register_first' : (context) => RegisterFirstScreen(),
+        '/register_second': (context) => RegisterSecondScreen(),
         '/mainSplashScreen': (context) => MainSplashScreen(),
         '/explorar_inscribirme': (context) => ExplorarInscribirme(),
       },

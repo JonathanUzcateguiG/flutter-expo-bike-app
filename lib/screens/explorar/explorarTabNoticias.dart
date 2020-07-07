@@ -10,7 +10,7 @@ class _ExplorarTabNoticiasState extends State<ExplorarTabNoticias> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 40),
+      padding: EdgeInsets.only(bottom: 80),
       child: ListView.builder(
       itemCount: (eventos.length / 2).ceil(),
       itemBuilder: (context, idx) {
@@ -27,6 +27,7 @@ class _ExplorarTabNoticiasState extends State<ExplorarTabNoticias> {
                       children: <Widget>[
                         Container(
                           height: 170,
+                          width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.0)
                           ),
@@ -49,6 +50,7 @@ class _ExplorarTabNoticiasState extends State<ExplorarTabNoticias> {
                                 ),
                                 Expanded(
                                   child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Text(
                                         eventos[idx].title,
@@ -69,10 +71,11 @@ class _ExplorarTabNoticiasState extends State<ExplorarTabNoticias> {
                     SizedBox(
                       width: 10,
                     ),
-                    Column(
+                    eventos.length > idx * 2 + 1 ? Column(
                       children: <Widget>[
                         Container(
                           height: 170,
+                          width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16.0)
                           ),
@@ -95,9 +98,10 @@ class _ExplorarTabNoticiasState extends State<ExplorarTabNoticias> {
                                 ),
                                 Expanded(
                                   child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Text(
-                                        eventos[idx + 1].title,
+                                        eventos[idx * 2 + 1].title,
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 13
@@ -110,6 +114,10 @@ class _ExplorarTabNoticiasState extends State<ExplorarTabNoticias> {
                             ),
                           ),
                         ),
+                      ],
+                    ) : Column(
+                      children: <Widget>[
+
                       ],
                     ),
                   ],

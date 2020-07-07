@@ -39,7 +39,7 @@ class ZonasTabCiclosWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 40),
+      padding: EdgeInsets.only(bottom: 80),
       child: ListView.builder(
         itemCount: (ciclos.length / 2).ceil(),
         itemBuilder: (context, idx) {
@@ -59,6 +59,7 @@ class ZonasTabCiclosWidget extends StatelessWidget {
                             },
                             child: Container(
                               height: 170,
+                              width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(16.0)
                               ),
@@ -81,6 +82,7 @@ class ZonasTabCiclosWidget extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: <Widget>[
                                           Text(
                                             ciclos[idx * 2].title,
@@ -120,7 +122,7 @@ class ZonasTabCiclosWidget extends StatelessWidget {
                                   children: <Widget>[
                                     Container(
                                       height: 120,
-                                      width: 145,
+                                      width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                           image: AssetImage(

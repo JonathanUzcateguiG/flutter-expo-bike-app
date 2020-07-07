@@ -1,4 +1,5 @@
-import 'package:expo_bike/screens/mainDialogScreen.dart';
+import 'package:expo_bike/screens/mainSplashScreen.dart';
+import 'package:expo_bike/screens/registerSecondScreen.dart';
 import 'package:expo_bike/services/storageservice.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -43,10 +44,11 @@ class _LoginScreenState extends State<LoginScreen> {
   void onGoogleSignIn(BuildContext context) async {
     FirebaseUser user = await _handleSignIn();
     print(user);
-    // Navigator.push(context,
-    //               MaterialPageRoute(
-    //                 builder: (context) => MainDialogScreen(user, _googleSignIn)
-    //               ));
+    Navigator.push(context,
+      MaterialPageRoute(
+        builder: (context) => MainSplashScreen()
+      )
+    );
   }
 
   @override
@@ -183,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                 RaisedButton(
                                                   onPressed: () {
                                                     //this.onGoogleSignIn(context);
-                                                    Navigator.of(context).pushNamedAndRemoveUntil('/mainDialogScreen', (Route<dynamic> route) => false);
+                                                    Navigator.of(context).pushNamedAndRemoveUntil('/mainSplashScreen', (Route<dynamic> route) => false);
                                                   },
                                                   color: AppColors.redColor,
                                                   textColor: Colors.white,
@@ -231,7 +233,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Column(
                                     children: <Widget>[
                                       GestureDetector(
-                                        onTap: () {},
+                                        onTap: () {
+                                        },
                                         child: Text(
                                           'Registrarme con Facebook',
                                           style: TextStyle(
@@ -293,11 +296,17 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               Row(
                                 children: <Widget>[
-                                  Text(
-                                    '¡Regístrate!',
-                                    style: TextStyle(
-                                      color: AppColors.greyBlackColor,
-                                      fontSize: 16
+                                  GestureDetector(
+                                    onTap: () {
+                                      print('asdf');
+                                      Navigator.pushNamed(context, '/register_first');
+                                    },
+                                    child: Text(
+                                      '¡Regístrate!',
+                                      style: TextStyle(
+                                        color: AppColors.greyBlackColor,
+                                        fontSize: 16
+                                      ),
                                     ),
                                   )
                                 ],
@@ -319,7 +328,9 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 width: 50,
                 height: 50,
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  valueColor: new AlwaysStoppedAnimation<Color>(AppColors.redColor)
+                ),
               ),
             ),
           );

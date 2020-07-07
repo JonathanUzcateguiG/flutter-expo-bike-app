@@ -55,13 +55,14 @@ class ZonasParkWidget extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width,
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(54, 0, 54, 10),
+                  padding: EdgeInsets.fromLTRB(54, 0, 54, 30),
                   child: Row(
                     children: <Widget>[
                       Column(
                         children: <Widget>[
                           Container(
                             height: 170,
+                            width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16.0)
                             ),
@@ -88,6 +89,7 @@ class ZonasParkWidget extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: <Widget>[
                                           Text(
                                             bikeParks[idx * 2].title,
@@ -127,7 +129,7 @@ class ZonasParkWidget extends StatelessWidget {
                                   children: <Widget>[
                                     Container(
                                       height: 120,
-                                      width: 145,
+                                      width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                           image: AssetImage(

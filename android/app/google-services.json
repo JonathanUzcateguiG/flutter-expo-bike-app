@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1078314534143:android:bc972865814775c70438ca",
+        "mobilesdk_app_id": "1:1078314534143:android:672cc12736fde6680438ca",
         "android_client_info": {
           "package_name": "com.example.expo_bike"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1078314534143-7d5jeug6q2kghubnge19jr65rlqfebs3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.expo_bike",
+            "certificate_hash": "12caf7a8b6b622eee0368df9f2ba961bb692e614"
+          }
+        },
         {
           "client_id": "1078314534143-vne7qnd4ldj7bhisqgo40b6sn8j3mhg8.apps.googleusercontent.com",
           "client_type": 1,

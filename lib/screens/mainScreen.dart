@@ -8,8 +8,9 @@ import 'expo/expoProductScreen.dart';
 import 'rutas/rutasMainScreen.dart';
 import 'rutas/rutasSubFirstScreen.dart';
 import 'rutas/rutasSubSecondScreen.dart';
-import 'cuentia/userSettingScreen.dart';
 import 'cuentia/cuentaMainScreen.dart';
+import 'cuentia/userSettingScreen.dart';
+import 'cuentia/myDataScreen.dart';
 import 'zonas/zonasTabParksSub.dart';
 
 class MainScreen extends StatefulWidget {
@@ -61,7 +62,7 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                     CuentaMainScreen(
                                       onItemPressed: (int index) => {
-                                        pageController.jumpToPage(5)
+                                        pageController.jumpToPage(index)
                                       }),
                                     UserSettingScreen(
                                       onItemPressed: (int index) => {
@@ -80,7 +81,13 @@ class _MainScreenState extends State<MainScreen> {
                                       },
                                     ),
                                     RutasSubSecondScreen(),
-                                    ZonasTabParksSub()];
+                                    ZonasTabParksSub(),
+                                    MyDataScreen(
+                                      onItemPressed: (int index) {
+                                        print('asdfasdf');
+                                        pageController.jumpToPage(index);
+                                      },
+                                    )];
 
   @override
   Widget build(BuildContext context) {

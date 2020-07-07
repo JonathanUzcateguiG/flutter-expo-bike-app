@@ -19,6 +19,7 @@ class _UserSettingScreenState extends State<UserSettingScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
           SingleChildScrollView(
@@ -85,380 +86,299 @@ class _UserSettingScreenState extends State<UserSettingScreen> {
                     ],
                   ),
                   SizedBox(
-                    height: 31,
+                    height: 150,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
+                  Container(
+                    padding: EdgeInsets.only(bottom: 2),
+                    child: new Material(
+                      elevation: 3.0,
+                      child: new Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                        ),
                         child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(left: 36.75),
-                              child: Column(
-                                children: <Widget>[
-                                  Row(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
                                     children: <Widget>[
-                                      Expanded(
-                                        child: (
-                                          Column(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 53),
-                                                child: Divider(
-                                                  color: AppColors.blackSecondColor,
-                                                  thickness: 1.3,
-                                                ),
-                                              )
-                                            ],
-                                          )
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(36.75, 6, 15, 6),
-                              child: Row(
-                                children: <Widget>[
-                                  Image(
-                                    image: AssetImage(
-                                      'assets/images/notification_icon.png',
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 16.25,
-                                  ),
-                                  Text(
-                                    'Notificaciones',
-                                    style: TextStyle(
-                                      fontSize: 12
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: <Widget>[
-                                        CustomSwitch(
-                                          value: notification_value,
-                                          onChanged: (bool val){
-                                            setState(() {
-                                              notification_value = val;
-                                            });
-                                          },
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(left: 36.75),
-                              child: Column(
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Expanded(
-                                        child: (
-                                          Column(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 53),
-                                                child: Divider(
-                                                  color: AppColors.blackSecondColor,
-                                                  thickness: 1.3,
-                                                ),
-                                              )
-                                            ],
-                                          )
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(36.75, 13, 15, 13),
-                              child: Row(
-                                children: <Widget>[
-                                  Image(
-                                    image: AssetImage(
-                                      'assets/images/message_icon.png',
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 16.25,
-                                  ),
-                                  Text(
-                                    'Mensajes',
-                                    style: TextStyle(
-                                      fontSize: 12
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: EdgeInsets.only(right: 25),
-                                          child: GestureDetector(
-                                            onTap: () {},
-                                            child: Image(
+                                      Padding(
+                                        padding: EdgeInsets.fromLTRB(36.75, 10, 15, 0),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Image(
                                               image: AssetImage(
-                                                'assets/images/right_icon.png'
+                                                'assets/images/notification_icon.png',
                                               ),
                                             ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(left: 36.75),
-                              child: Column(
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Expanded(
-                                        child: (
-                                          Column(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 53),
-                                                child: Divider(
-                                                  color: AppColors.blackSecondColor,
-                                                  thickness: 1.3,
-                                                ),
-                                              )
-                                            ],
-                                          )
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(36.75, 13, 15, 13),
-                              child: Row(
-                                children: <Widget>[
-                                  Image(
-                                    image: AssetImage(
-                                      'assets/images/star_icon.png',
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 25,
-                                  ),
-                                  Text(
-                                    'Valor esta aplicación',
-                                    style: TextStyle(
-                                      fontSize: 12
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: EdgeInsets.only(right: 25),
-                                          child: GestureDetector(
-                                            onTap: () {},
-                                            child: Image(
-                                              image: AssetImage(
-                                                'assets/images/right_icon.png'
+                                            SizedBox(
+                                              width: 16.25,
+                                            ),
+                                            Text(
+                                              'Notificaciones',
+                                              style: TextStyle(
+                                                fontSize: 12
                                               ),
                                             ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(left: 36.75),
-                              child: Column(
-                                children: <Widget>[
-                                  Row(
-                                    children: <Widget>[
-                                      Expanded(
-                                        child: (
-                                          Column(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 53),
-                                                child: Divider(
-                                                  color: AppColors.blackSecondColor,
-                                                  thickness: 1.3,
-                                                ),
-                                              )
-                                            ],
-                                          )
+                                            Expanded(
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                children: <Widget>[
+                                                  CustomSwitch(
+                                                    value: notification_value,
+                                                    onChanged: (bool val){
+                                                      setState(() {
+                                                        notification_value = val;
+                                                      });
+                                                    },
+                                                  ),
+                                                ],
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       )
                                     ],
                                   ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(36.75, 10, 15, 10),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                  Navigator.of(context).pushNamedAndRemoveUntil('/login', (Route<dynamic> route) => false);
-                                },
-                                child: Row(
-                                  children: <Widget>[
-                                    Image(
-                                      image: AssetImage(
-                                        'assets/images/sign_out_icon.png',
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 25.25,
-                                    ),
-                                    Text(
-                                      'Cerrar sesión',
-                                      style: TextStyle(
-                                        fontSize: 12
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                )
+                              ],
                             ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(left: 36.75),
-                              child: Column(
-                                children: <Widget>[
-                                  Row(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
                                     children: <Widget>[
-                                      Expanded(
-                                        child: (
-                                          Column(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 53),
-                                                child: Divider(
-                                                  color: AppColors.blackSecondColor,
-                                                  thickness: 1.3,
-                                                ),
-                                              )
-                                            ],
-                                          )
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 36.75),
+                                        child: Divider(
+                                          color: AppColors.greyOverOpacityColor,
+                                          thickness: 1.3,
                                         ),
                                       )
                                     ],
                                   ),
-                                ],
-                              ),
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.fromLTRB(36.75, 4, 0, 0),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Image(
+                                              image: AssetImage(
+                                                'assets/images/message_icon.png',
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 16.25,
+                                            ),
+                                            Text(
+                                              'Mensajes',
+                                              style: TextStyle(
+                                                fontSize: 12
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                children: <Widget>[
+                                                  Padding(
+                                                    padding: EdgeInsets.only(right: 20),
+                                                    child: GestureDetector(
+                                                      onTap: () {},
+                                                      child: Image(
+                                                        image: AssetImage(
+                                                          'assets/images/right_icon.png'
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 36.75),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: (
+                                                    Column(
+                                                      children: <Widget>[
+                                                        Divider(
+                                                          color: AppColors.greyOverOpacityColor,
+                                                          thickness: 1.3,
+                                                        ),
+                                                      ],
+                                                    )
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.fromLTRB(36.75, 4, 0, 0),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Image(
+                                              image: AssetImage(
+                                                'assets/images/star_icon.png',
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 25,
+                                            ),
+                                            Text(
+                                              'Valor esta aplicación',
+                                              style: TextStyle(
+                                                fontSize: 12
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                children: <Widget>[
+                                                  Padding(
+                                                    padding: EdgeInsets.only(right: 20),
+                                                    child: GestureDetector(
+                                                      onTap: () {},
+                                                      child: Image(
+                                                        image: AssetImage(
+                                                          'assets/images/right_icon.png'
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.only(left: 36.75),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: (
+                                                    Column(
+                                                      children: <Widget>[
+                                                        Divider(
+                                                          color: AppColors.greyOverOpacityColor,
+                                                          thickness: 1.3,
+                                                        ),
+                                                      ],
+                                                    )
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.fromLTRB(36.75, 4, 0, 0),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                            Navigator.of(context).pushNamedAndRemoveUntil('/login', (Route<dynamic> route) => false);
+                                          },
+                                          child: Row(
+                                            children: <Widget>[
+                                              Image(
+                                                image: AssetImage(
+                                                  'assets/images/sign_out_icon.png',
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 25.25,
+                                              ),
+                                              Text(
+                                                'Cerrar sesión',
+                                                style: TextStyle(
+                                                  fontSize: 12
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
                             )
                           ],
                         ),
                       )
-                    ],
+                    )
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 50,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -491,7 +411,6 @@ class _UserSettingScreenState extends State<UserSettingScreen> {
               ),
             ),
           ),
-          BottomFixedLabel()
         ],
       ),
     );

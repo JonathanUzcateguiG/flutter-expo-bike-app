@@ -10,7 +10,7 @@ class _ExplorarTabUsaditosState extends State<ExplorarTabUsaditos> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 40),
+      padding: EdgeInsets.only(bottom: 80),
       child: ListView.builder(
         itemCount: (usaditos.length / 2).ceil(),
         itemBuilder: (context, idx) {
@@ -27,6 +27,7 @@ class _ExplorarTabUsaditosState extends State<ExplorarTabUsaditos> {
                         children: <Widget>[
                           Container(
                             height: 170,
+                            width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16.0)
                             ),
@@ -49,6 +50,7 @@ class _ExplorarTabUsaditosState extends State<ExplorarTabUsaditos> {
                                   ),
                                   Expanded(
                                     child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Text(
                                           usaditos[idx].title,
@@ -69,10 +71,11 @@ class _ExplorarTabUsaditosState extends State<ExplorarTabUsaditos> {
                       SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      usaditos.length > idx * 2 + 1 ? Column(
                         children: <Widget>[
                           Container(
                             height: 170,
+                            width: (MediaQuery.of(context).size.width - 108 - 10) / 2,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16.0)
                             ),
@@ -95,6 +98,7 @@ class _ExplorarTabUsaditosState extends State<ExplorarTabUsaditos> {
                                   ),
                                   Expanded(
                                     child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         Text(
                                           usaditos[idx + 1].title,
@@ -110,6 +114,10 @@ class _ExplorarTabUsaditosState extends State<ExplorarTabUsaditos> {
                               ),
                             ),
                           ),
+                        ],
+                      ) : Column(
+                        children: <Widget>[
+
                         ],
                       ),
                     ],
